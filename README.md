@@ -70,5 +70,5 @@ Install DBeaver locally and add the credentials to connect to the OCI PostgreSQL
 ![5](images/img_5.png)
 
 - Open OAC and create connection
-![5](images/img_5.png)
-![6](images/img_6.png)
+![5](images/img_6.png)
+![6](images/img_7.png)
