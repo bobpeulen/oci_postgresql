@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/5722817c-aa96-4046-8780-b2030c074222)# Connect to OCI PostgreSQL
+# Connect to OCI PostgreSQL
 
 - Create DB in private subnet
 - Create instance in public subnet, same VCN
