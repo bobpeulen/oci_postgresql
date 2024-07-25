@@ -46,7 +46,7 @@ Example of fulll statement: psql "sslmode=verify-full sslrootcert=./dbsystem.pub
 
 # Connect using DBeaver
 
-Install DBeaver locally and add the credentials to connect to the OCI PostgreSQL. See the screenshots. 
+Install DBeaver locally and add the credentials to connect to the OCI PostgreSQL. See the screenshots. DBeaver will use the same instance in the publib subnet (using SSH) to be able to access the OCI PostgreSQL database.
 
 ![1](images/img_1.png)
 ![2](images/img_2.png)
