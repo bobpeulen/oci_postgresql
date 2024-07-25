@@ -16,7 +16,7 @@ sudo systemctl enable postgresql-14
 sudo systemctl start postgresql-14
 ```
 
-rm -rf ~/.pgpass
+```rm -rf ~/.pgpass```
 
 ## Get the certificate and add
 ```
