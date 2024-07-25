@@ -26,6 +26,7 @@ sudo nano ./dbsystem.pub
 
 ## Test the connection
 ```psql -h [DB Private IP] -U [user name] -d postgres```
+
 example: psql -h 10.0.1.81 -U admin -d postgres
 
 ## Run statement
