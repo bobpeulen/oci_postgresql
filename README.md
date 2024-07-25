@@ -1,4 +1,4 @@
-# Connect to OCI PostgreSQL
+![image](https://github.com/user-attachments/assets/5722817c-aa96-4046-8780-b2030c074222)# Connect to OCI PostgreSQL
 
 - Create DB in private subnet
 - Create instance in public subnet, same VCN
@@ -47,4 +47,17 @@ psql "sslmode=verify-full sslrootcert=./dbsystem.pub host=e43jihot7lyhlnh6kat3io
 ![1](images/img_1.png)
 ![2](images/img_2.png)
 
-# Load some data using DBeaver as table
+### Load some data using DBeaver as table
+
+# Connect using Oracle Analytis Cloud
+- Create on OAC instance
+- Create a new Private Zone in DNS management
+- Add a record in the new private zone, pointing to the private ip/endpoint of the db
+
+![4](images/img_4.png)
+![3](images/img_3.png)
+
+- Create a PAC for the OAC instance. Use the zone just created (not the record). Select the private subnet.
+![5](images/img_5.png)
+
+- Open OAC and create connection
