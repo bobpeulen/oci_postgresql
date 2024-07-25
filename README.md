@@ -41,6 +41,9 @@ Example of fulll statement: psql "sslmode=verify-full sslrootcert=./dbsystem.pub
 ```select version();```
 
 
+
+
+
 # Connect using DBeaver
 
 Install DBeaver locally and add the credentials to connect to the OCI PostgreSQL. See the screenshots. 
@@ -49,6 +52,11 @@ Install DBeaver locally and add the credentials to connect to the OCI PostgreSQL
 ![2](images/img_2.png)
 
 ### Load some data using DBeaver as table
+
+
+
+
+
 
 # Connect using Oracle Analytis Cloud
 - Create on OAC instance
