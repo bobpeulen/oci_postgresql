@@ -46,3 +46,5 @@ psql "sslmode=verify-full sslrootcert=./dbsystem.pub host=e43jihot7lyhlnh6kat3io
 
 ![1](images/img_1.png)
 ![2](images/img_2.png)
+
+# Load some data using DBeaver as table
