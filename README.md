@@ -48,8 +48,8 @@ Example of fulll statement: psql "sslmode=verify-full sslrootcert=./dbsystem.pub
 
 Install DBeaver locally and add the credentials to connect to the OCI PostgreSQL. See the screenshots. DBeaver will use the same instance in the publib subnet (using SSH) to be able to access the OCI PostgreSQL database.
 
-![1](images/img_1.png)
-![2](images/img_2.png)
+  ![1](images/img_1.png)
+  ![2](images/img_2.png)
 
 ### Load some data using DBeaver as table
 
@@ -63,12 +63,13 @@ Install DBeaver locally and add the credentials to connect to the OCI PostgreSQL
 - Create a new Private Zone in DNS management
 - Add a record in the new private zone, pointing to the private ip/endpoint of the db
 
-![4](images/img_4.png)
-![3](images/img_3.png)
+  ![4](images/img_4.png)
+  ![3](images/img_3.png)
 
 - Create a PAC for the OAC instance. Use the zone just created (not the record). Select the private subnet.
-![5](images/img_5.png)
+  ![5](images/img_5.png)
 
 - Open OAC and create connection
-![5](images/img_6.png)
-![6](images/img_7.png)
+  
+  ![5](images/img_6.png)
+  ![6](images/img_7.png)
