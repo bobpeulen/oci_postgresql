@@ -1,4 +1,4 @@
-# Connect to OCI PostgreSQL
+# Connect to OCI PostgreSQL, load data using DBeaver and connect to Oracle Analytics Cloud
 
 - Create DB in private subnet
 - Create instance in public subnet, same VCN
