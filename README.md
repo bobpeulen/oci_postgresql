@@ -8,6 +8,8 @@ Prerequisites
 
  For more details on using Linux instance to connect to PostgreSQL, [see documentation here](https://www.postgresql.org/download/linux/redhat/).
 
+# Create and access an OCI PostgreSQL database
+
 1. SSH into the Linux instance, make sure the instance is in the public subnet of the same VCN you provisioned the OCI PostgreSQL instance. Run the below command. This will install the client for PostgreSQL version 14. 
 ```
 sudo dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
