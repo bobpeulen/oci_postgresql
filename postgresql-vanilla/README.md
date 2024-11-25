@@ -38,7 +38,28 @@ Create user with password, on 'postgres' user
 ```
 sudo su - postgres
 psql -c "alter user postgres with password 'Blabla1991'"
+```
 
+Create DB schema/user and check user
+```
+sudo -u postgres psql
+CREATE USER userbp WITH CREATEDB CREATEROLE PASSWORD 'Blabla1991';
+\du
+```
+
+Create database and table and add data
+```
+CREATE DATABASE db_1 OWNER userbp;
+CREATE TABLE cars (
+  brand VARCHAR(255),
+  model VARCHAR(255),
+  year INT
+);
+INSERT INTO cars (brand, model, year) VALUES ('Ford', 'Mustang', 1964);
+INSERT INTO cars (brand, model, year) VALUES ('Volvo', 'Mustang', 1988);
+INSERT INTO cars (brand, model, year) VALUES ('Mercedes', 'EQB', 1954);
+INSERT INTO cars (brand, model, year) VALUES ('Ford', 'Version', 1962);
+```
 
 
 
