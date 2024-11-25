@@ -21,3 +21,24 @@ sudo dnf update -y
 sudo dnf -qy module disable postgresql
 sudo dnf install postgresql14 postgresql14-server
 ````
+
+Initialize and start
+```
+sudo /usr/pgsql-14/bin/postgresql-14-setup initdb
+sudo systemctl start postgresql-14
+sudo systemctl enable postgresql-14
+```
+
+Status
+```
+sudo systemctl status postgresql-14
+```
+
+Create user with password, on 'postgres' user
+```
+sudo su - postgres
+psql -c "alter user postgres with password 'Blabla1991'"
+
+
+
+
