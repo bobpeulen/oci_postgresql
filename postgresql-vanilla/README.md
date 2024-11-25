@@ -1,5 +1,6 @@
 # Install PostgreSQL V14 on VM
 
+TRY ON PRIVATE SUBNET. SAME VCN. 
 
 - Oracle Linux 8
 - Public subnet
@@ -61,5 +62,27 @@ INSERT INTO cars (brand, model, year) VALUES ('Mercedes', 'EQB', 1954);
 INSERT INTO cars (brand, model, year) VALUES ('Ford', 'Version', 1962);
 ```
 
+Open port
+```
+sudo firewall-cmd --permanent --add-port=5432/tcp
+sudo firewall-cmd --reload
+sudo setenforce 0
+```
 
+# Create new VM to perform pg_dump and pg_restore
+- Oracle Linux 8
+- Same public subnet as vanilla postgresql db
+
+Install client
+```
+sudo yum install postgresql
+
+```
+
+Run pg_dump on database
+```
+pg_dump -U postgres -h 130.61.29.241 -s -E 'UTF8' -d db_1 -f db_1_schema_dump.sql
+pg_dump -U postgres -h bp-test-remove.sub05031948250.opensourcedata.oraclevcn.com -s -E 'UTF8' -d db_1 -f db_1_schema_dump.sql
+bp-test-remove.sub05031948250.opensourcedata.oraclevcn.com
+```
 
