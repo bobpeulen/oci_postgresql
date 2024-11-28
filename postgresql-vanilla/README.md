@@ -1,7 +1,5 @@
 # Install PostgreSQL V14 on VM
 
-TRY ON PRIVATE SUBNET. SAME VCN. 
-
 - Oracle Linux 8
 - Public subnet
 
@@ -68,6 +66,13 @@ sudo firewall-cmd --permanent --add-port=5432/tcp
 sudo firewall-cmd --reload
 sudo setenforce 0
 ```
+
+test
+```
+sudo firewall-cmd --zone=public --permanent --add-source=130.61.169.182
+```
+
+
 
 # Create new VM to perform pg_dump and pg_restore
 - Oracle Linux 8
