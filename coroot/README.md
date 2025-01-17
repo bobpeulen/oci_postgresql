@@ -18,9 +18,11 @@ select * from pg_stat_statements;
 
 ## Run the coroot container
 ```
-docker run --detach --name coroot-pg-agent \
---env DSN="postgresql://admin:@<HOST>:5432/postgres?connect_timeout=1&statement_timeout=30000" \
+sudo docker run --name coroot-pg-1 -p 0.0.0.0:8080:80 \
+--env DSN="postgresql://admin:pw@10.20.2.52:5432/postgres?connect_timeout=1&statement_timeout=30000" \
 ghcr.io/coroot/coroot-pg-agent
+
+--detach 
 ```
 
 ## Check whether Docker is running
@@ -29,3 +31,5 @@ sudo docker ps
 ```
 
 # Open on public_ip:8080
+
+
