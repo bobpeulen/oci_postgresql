@@ -22,8 +22,20 @@ sudo systemctl start docker
 
 MCP
 ```
-docker pull crystaldba/postgres-mcp
+sudo docker pull crystaldba/postgres-mcp
 ```
 
 Claude Desktop
-https://github.com/aaddrick/claude-desktop-debian
+sudo dnf install git -y
+# Clone the repository
+git clone https://github.com/aaddrick/claude-desktop-debian.git
+cd claude-desktop-debian
+
+# Build a .deb package (default)
+./build.sh
+
+# Build an AppImage
+./build.sh --build appimage
+
+# Build with custom options
+./build.sh --build deb --clean no  # Keep intermediate files
