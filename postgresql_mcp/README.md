@@ -26,13 +26,14 @@ sudo docker pull crystaldba/postgres-mcp
 ```
 
 Claude Desktop
+```
 sudo dnf install git -y
-# Clone the repository
 git clone https://github.com/aaddrick/claude-desktop-debian.git
 cd claude-desktop-debian
-
+```
 # Build a .deb package (default)
-./build.sh
+
+bash build.sh
 
 # Build an AppImage
 ./build.sh --build appimage
