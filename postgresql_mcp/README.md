@@ -33,7 +33,9 @@ cd claude-desktop-debian
 ```
 # Build a .deb package (default)
 
+```
 bash build.sh
+```
 
 # Build an AppImage
 ./build.sh --build appimage
