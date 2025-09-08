@@ -1,3 +1,13 @@
+# OCI PostgreSQL 
+
+- OCI Data Science notebooka as IDE, in same private subnet as OCI PostgreSQL
+    - Using FastMCP 
+- OCI GenAI
+
+
+
+
+
 # OCI PostgreSQL as MCP Server
 
 Following https://github.com/crystaldba/postgres-mcp
