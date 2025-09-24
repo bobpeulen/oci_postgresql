@@ -25,3 +25,8 @@ sudo systemctl start docker
 sudo docker pull docker.osgeo.org/geoserver:2.28.x
 sudo docker run -it -p8080:8080 docker.osgeo.org/geoserver:2.28.x
 ```
+# Open Geoserver
+GeoServer's default username and password: Username: admin. Password: geoserver
+``
+http://[YOUR PUBLIC IP]2:8080/geoserver/
+```
