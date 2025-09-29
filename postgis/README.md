@@ -1,7 +1,7 @@
 # Integrate Geoserver and PostGIS using OCI Database with PostgreSQL
 
-# Prequisites
-- Ran on Oracle Linux 9 in public subnet, same VCN as the PostgreSQL database
+# Prerequisites
+- Oracle Linux 9 in public subnet, same VCN as the PostgreSQL database
 - OCI Database with PostgreSQL and PostGIS extensions enabled in private subnet
 - Open ports for PostgreSQL and Geoserver (8080)
 
@@ -26,7 +26,7 @@ sudo docker pull docker.osgeo.org/geoserver:2.28.x
 sudo docker run -it -p8080:8080 docker.osgeo.org/geoserver:2.28.x
 ```
 # Open Geoserver
-GeoServer's default username and password: Username: admin. Password: geoserver
+Open GeoServer using the below public IP/port. Log in. GeoServer's default username and password: Username: admin. Password: geoserver
 ```
 http://[YOUR PUBLIC IP]2:8080/geoserver/
 ```
@@ -37,7 +37,7 @@ Link: https://freegistutorial.com/how-to-install-geoserver-in-oracle-linux-9/
 # Load data into OCI Database with PostgreSQL
 These steps describe an example of loading NYC spatial data into OCI Database with PostgreSQL. The steps use PgAdmin as tool.
 
-1. Download and install PgAdmin on your local machine.
+1. Download and install PgAdmin on your local machine. [Download here](https://www.pgadmin.org/).
 2. Connect to OCI Database with PostgreSQL using a jumphost (VM in public subnet). [See steps here](https://docs.oracle.com/en/learn/postgresql-pgadmin4-connection/index.html).
 3. Once connected using PgAdmin, [follow the steps here](https://postgis.net/workshops/postgis-intro/loading_data.html) to load example NYC data
 
