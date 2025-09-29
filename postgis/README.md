@@ -55,7 +55,8 @@ These steps describe an example of loading NYC spatial data into OCI Database wi
 # Add a new Layer and review preview
 - Once the connection is established, click on "Layers" and following "add a new layer"
 - Choose your just added store, like "ne:postgis_bp"
-  ![image](images/img_1_geo.png)
 
+  ![image](images/img_1_geo.png)
+  
 - The spatial tables should appear. Click on Publish.
 - Click on Layer Preview and search for the Layer your just published. Click on on any of the formats or on "OpenLayers" to preview.
