@@ -1,4 +1,4 @@
-# Integrated Geoserver and PostGIS using OCI Database with PostgreSQL
+# Integrate Geoserver and PostGIS using OCI Database with PostgreSQL
 
 # Prequisites
 - Ran on Oracle Linux 9 in public subnet, same VCN as the PostgreSQL database
