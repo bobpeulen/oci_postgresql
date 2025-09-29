@@ -1,4 +1,4 @@
-# Geoserver and PostGIS using OCI Database with PostgreSQL
+# Integrated Geoserver and PostGIS using OCI Database with PostgreSQL
 
 # Prequisites
 - Ran on Oracle Linux 9 in public subnet, same VCN as the PostgreSQL database
@@ -30,3 +30,32 @@ GeoServer's default username and password: Username: admin. Password: geoserver
 ```
 http://[YOUR PUBLIC IP]2:8080/geoserver/
 ```
+
+# Optional. Install Geoserver without docker.
+Link: https://freegistutorial.com/how-to-install-geoserver-in-oracle-linux-9/
+
+# Load data into OCI Database with PostgreSQL
+These steps describe an example of loading NYC spatial data into OCI Database with PostgreSQL. The steps use PgAdmin as tool.
+
+1. Download and install PgAdmin on your local machine.
+2. Connect to OCI Database with PostgreSQL using a jumphost (VM in public subnet). [See steps here](https://docs.oracle.com/en/learn/postgresql-pgadmin4-connection/index.html).
+3. Once connected using PgAdmin, [follow the steps here](https://postgis.net/workshops/postgis-intro/loading_data.html) to load example NYC data
+
+# Add a new Store in Geoserver
+- Database = Name of database which includes the PostGIS extension and spatial tables, like 'nyc'.
+- Schema = public
+- Host: the private IP of the OCI Database with PostgreSQL instance
+- Port: 5432
+- Username/password: add your username and password when you created the OCI Database with PostgreSQL
+- SSL MODE = Require
+- Mark the "Enabled" button to enable the store once you save/apply the connection
+
+ ![image](images/img_2_geo.png)
+ 
+# Add a new Layer and review preview
+- Once the connection is established, click on "Layers" and following "add a new layer"
+- Choose your just added store, like "ne:postgis_bp"
+  ![image](images/img_1_geo.png)
+
+- The spatial tables should appear. Click on Publish.
+- Click on Layer Preview and search for the Layer your just published. Click on on any of the formats or on "OpenLayers" to preview.
