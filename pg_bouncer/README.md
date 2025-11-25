@@ -74,17 +74,17 @@ The below example uses Canonical Ubuntu 24.04 and assumes your PostgreSQL databa
 
   ![image](images/img_4.png)
 
-  # 4 Review PgBouncer connection
+# 4 Review PgBouncer connection
 
-  - Install PostgreSQL client if not done
-    ```
-    sudo apt-get install postgresql postgresql-client
-    ```
+- Install PostgreSQL client if not done
+  ```
+  sudo apt-get install postgresql postgresql-client
+  ```
 
-  - Connect using psql, through pg_bouncer. Add your password when prompted. 
-    ```
-    psql -h localhost -p 6432 -U pgadmin -d writer
-    ```
+- Connect using psql, through pg_bouncer. Add your password when prompted. 
+  ```
+  psql -h localhost -p 6432 -U pgadmin -d writer
+  ```
 
   When working, you should see Writer =>.
     
