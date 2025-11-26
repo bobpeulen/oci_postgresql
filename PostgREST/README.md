@@ -1,6 +1,9 @@
 # Turn OCI Database with PostgreSQL into RESTful API
 
-# Install docker
+The below steps use [PostgREST](https://docs.postgrest.org/en/v14/index.html) to build the example and follows the same steps as their page.
+
+
+# Install docker on your compute
 Follow e.g., these steps for [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 
 
@@ -21,7 +24,7 @@ sudo nano tutorial.conf
 Add the below to the new file. Change the private endpoint, Database, etc.
 
 ```
-db-uri = "postgres://authenticator:mysecretpassword@10.20.2.63:5432/bpeulen"
+db-uri = "postgres://USER:PASSWORD@PRIVATE_ENDPOINT_DB:5432/bpeulen"
 db-schemas = "api"
 db-anon-role = "web_anon"
 ```
@@ -34,7 +37,7 @@ sudo firewall-cmd --reload
 ```
 
 
-# Start PostgRES
+# Start PostgREST
 ```
 ./postgrest tutorial.conf
 ```
