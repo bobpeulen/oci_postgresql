@@ -25,3 +25,18 @@ db-uri = "postgres://authenticator:mysecretpassword@10.20.2.63:5432/bpeulen"
 db-schemas = "api"
 db-anon-role = "web_anon"
 ```
+
+# Open ports
+```
+sudo firewall-cmd --permanent --add-port=3000/tcp
+sudo firewall-cmd --reload 
+```
+
+
+# Start PostgRES
+```
+./postgrest tutorial.conf
+```
+
+# Test REST response
+
