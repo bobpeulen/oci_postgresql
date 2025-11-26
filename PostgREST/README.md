@@ -27,6 +27,7 @@ db-anon-role = "web_anon"
 ```
 
 # Open ports
+Make sure to add port/TCP to your security subnets
 ```
 sudo firewall-cmd --permanent --add-port=3000/tcp
 sudo firewall-cmd --reload 
@@ -38,5 +39,8 @@ sudo firewall-cmd --reload
 ./postgrest tutorial.conf
 ```
 
-# Test REST response
+# Test REST response from local machine
+```
+curl http://[PUBLIC_IP]:3000/todos
+```
 
