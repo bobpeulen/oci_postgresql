@@ -6,7 +6,7 @@
 
 
 
-
+http://130.61.100.26xxx:8000/sse
 
 # OCI PostgreSQL as MCP Server
 
