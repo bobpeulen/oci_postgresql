@@ -6,6 +6,7 @@ The steps use PostgresQL MCP Pro, which can be found [here](https://github.com/c
 - Oracle Linux VM
 - Open correct ports (8000) on VM and in security lists
 - Create PostgreSQL instance, with ```pg_stat_statements``` enabled.
+- VScode and Cline installed
 
 
 # Run PostgreSQL MCP Pro - steps
