@@ -1,51 +1,29 @@
-# OCI PostgreSQL 
+# Use PostgreSQL MCP Pro with OCI Database with PostgreSQL
 
-- OCI Data Science notebooka as IDE, in same private subnet as OCI PostgreSQL
-    - Using FastMCP 
-- OCI GenAI
+The steps use PostgresQL MCP Pro, which can be found [here](https://github.com/crystaldba/postgres-mcp/tree/main).
 
-
-
-http://130.61.100.26xxx:8000/sse
-
-# OCI PostgreSQL as MCP Server
-
-Following https://github.com/crystaldba/postgres-mcp
-
-```
-docker run -p 8000:8000 \
-  -e DATABASE_URI=postgresql://bob:xx--167@xx:5432/bpeulen \
-  crystaldba/postgres-mcp --access-mode=unrestricted 
-```
+**Prerequisites:**
+- Oracle Linux VM
+- Open correct ports (8000) on VM and in security lists
+- Create PostgreSQL instance, with ```pg_stat_statements``` enablement.
 
 
-Docker
-```
-sudo yum install -y yum-utils  
-sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
-sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo systemctl start docker
-```
+# Run PostgreSQL MCP Pro - steps
 
-MCP
-```
-sudo docker pull crystaldba/postgres-mcp
-```
+- Install/Start Docker
+    ```
+    sudo yum install -y yum-utils  
+    sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+    sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    sudo systemctl start docker
+    ```
 
-Claude Desktop
-```
-sudo dnf install git -y
-git clone https://github.com/aaddrick/claude-desktop-debian.git
-cd claude-desktop-debian
-```
-# Build a .deb package (default)
+- Run the MCP server.
+Change the user name, password, endpoint, and database in the below.
+    ```
+    sudo docker run -p 8000:8000 \
+      -e DATABASE_URI=postgresql://[USER_NAME]:[PASSWORD]@[ENDPOINT]:5432/[DATABASE] \
+      crystaldba/postgres-mcp --access-mode=unrestricted --transport=sse
+    ```
 
-```
-bash build.sh
-```
 
-# Build an AppImage
-./build.sh --build appimage
-
-# Build with custom options
-./build.sh --build deb --clean no  # Keep intermediate files
