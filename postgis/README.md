@@ -3,7 +3,7 @@
 # Prerequisites
 - Oracle Linux 9 in public subnet, same VCN as the PostgreSQL database
 - OCI Database with PostgreSQL and PostGIS extensions enabled in private subnet
-- Open ports for PostgreSQL and Geoserver (8080)
+- Open ports for PostgreSQL and Geoserver (8080)x
 
 
 # Install docker
