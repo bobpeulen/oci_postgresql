@@ -19,3 +19,14 @@ It should be clear that all nodes, especially the healthy ones, keep having acce
 Topic 5: Database Optimized Storage
 Description of what visually should be shown: OCI PostgreSQL uses performance tiers as described here https://docs.oracle.com/en-us/iaas/Content/postgresql/performance-tiers.htm. Ranging from 75K IOPS to 750 IOPs. In some way, make it very visual that the performance is guaranteed irrespective of the database size. And that clients can choose different IOPs.
 
+Topic 6: Cross Region Warm Standby
+Description: use the information on this page to build a similar scenario like the other topics, showcasing OCI PostgreSLQ support cross region standby. Use eg Amsterdam and Frankfurt as regions. Show the database instances in the different regions can be different shapes (eg large and small). Show in a flow that a standalone gets promoted to "Primary" (in Frankfurt) and the warm standby in Amsterdam is attached and in sync. Show the warm standby has only read-only nodes. https://docs.oracle.com/en-us/iaas/Content/postgresql/cross-region-replication.htm
+
+Topic 7: Automated Backups & PITR
+Description: 
+
+Topic 8: Query Insights & Monitoring
+
+Topic 9: Configurations & Extensions
+
+Topic 10: Pricing
