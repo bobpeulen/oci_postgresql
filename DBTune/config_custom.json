@@ -14,7 +14,7 @@
     },
     {
       "configKey": "checkpoint_completion_target",
-      "overridenConfigValue": 0,9
+      "overridenConfigValue": 1
     },
 	{
       "configKey": "effective_io_concurrency",
