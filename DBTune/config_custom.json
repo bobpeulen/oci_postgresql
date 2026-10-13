@@ -2,75 +2,75 @@
   "items": [
     {
       "configKey": "work_mem",
-      "overridenConfigValue": 4096
+      "overridenConfigValue": "4096"
     },
     {
       "configKey": "random_page_cost",
-      "overridenConfigValue": 4
+      "overridenConfigValue": "4"
     },
-	{
+    {
       "configKey": "seq_page_cost",
-      "overridenConfigValue": 1
+      "overridenConfigValue": "1"
     },
     {
       "configKey": "checkpoint_completion_target",
-      "overridenConfigValue": 1
+      "overridenConfigValue": "1"
     },
-	{
+    {
       "configKey": "effective_io_concurrency",
-      "overridenConfigValue": 1
+      "overridenConfigValue": "1"
     },
     {
       "configKey": "max_parallel_workers_per_gather",
-      "overridenConfigValue": 3
+      "overridenConfigValue": "3"
     },
-	{
+    {
       "configKey": "max_parallel_workers",
-      "overridenConfigValue": 8
+      "overridenConfigValue": "8"
     },
     {
       "configKey": "max_wal_size",
-      "overridenConfigValue": 1024
+      "overridenConfigValue": "1024"
     },
-	    {
+    {
       "configKey": "min_wal_size",
-      "overridenConfigValue": 1024
+      "overridenConfigValue": "1024"
     },
     {
       "configKey": "bgwriter_lru_maxpages",
-      "overridenConfigValue": 100
+      "overridenConfigValue": "100"
     },
-	{
+    {
       "configKey": "bgwriter_delay",
-      "overridenConfigValue": 200
+      "overridenConfigValue": "200"
     },
     {
       "configKey": "effective_cache_size",
-      "overridenConfigValue": 3145728
+      "overridenConfigValue": "3145728"
     },
-		{
+    {
       "configKey": "maintenance_work_mem",
-      "overridenConfigValue": 65536
+      "overridenConfigValue": "65536"
     },
     {
       "configKey": "default_statistics_target",
-      "overridenConfigValue": 100
+      "overridenConfigValue": "100"
     },
-	    {
+    {
       "configKey": "max_parallel_maintenance_workers",
-      "overridenConfigValue": 2
+      "overridenConfigValue": "2"
     },
     {
       "configKey": "shared_buffers",
-      "overridenConfigValue": 851968
-    },
-	{
-      "configKey": "max_worker_processes ",
-      "overridenConfigValue": 8
+      "overridenConfigValue": "851968"
     },
     {
-      "configKey": "wal_buffers ",
-      "overridenConfigValue": -1
-	 }
+      "configKey": "max_worker_processes",
+      "overridenConfigValue": "8"
+    },
+    {
+      "configKey": "wal_buffers",
+      "overridenConfigValue": "-1"
+    }
   ]
 }
