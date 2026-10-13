@@ -20,4 +20,11 @@ sudo docker run --restart always \
 ## OCI CLI Create / Update Config
 
 ```
+export compartment_id=ocid1.compartment.oc1..xxx
+export db_version=17
+export display_name=config_custom_v1
+export shape_instance=VM.Standard.E6.Flex
+
+oci psql configuration create --db-version $db_version --display-name $display_name --compartment-id $compartment_id --shape $shape_instance --db-configuration-overrides file://db-configuration-overrides.json
+
 ```
