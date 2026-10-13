@@ -16,8 +16,9 @@ sudo docker run --restart always \
     -e DBT_POSTGRESQL_INCLUDE_QUERIES=true \
     public.ecr.aws/dbtune/dbtune/agent:latest
 ```
+# 1) Create new Config and 2) Change Config to db system
 
-## OCI CLI Create / Update Config
+## 1. OCI CLI Create / Update Config
 
 ```
 export compartment_id=ocid1.compartment.oc1..xxx
@@ -27,4 +28,14 @@ export shape_instance=VM.Standard.E6.Flex
 
 oci psql configuration create --db-version $db_version --display-name $display_name --compartment-id $compartment_id --shape $shape_instance --db-configuration-overrides file://db-configuration-overrides.json
 
+```
+
+## 2. Change Config to db system
+```
+export db_system_ocid=ocid1.postgresqldbsystem.oc1.eu-frankfurt-1.amxx
+export custom_config_ocid=ocid1.postgresqldefaultconfiguration.oc1.eu-frankfurt-1.amaaaaaaxx
+
+oci psql db-system update \
+  --db-system-id "$db_system_ocid" \
+  --db-configuration-params "{\"applyConfig\":\"RESTART\",\"configId\":\"$custom_config_ocid\"}"
 ```
