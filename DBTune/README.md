@@ -16,3 +16,8 @@ sudo docker run --restart always \
     -e DBT_POSTGRESQL_INCLUDE_QUERIES=true \
     public.ecr.aws/dbtune/dbtune/agent:latest
 ```
+
+## OCI CLI Create / Update Config
+
+```
+```
