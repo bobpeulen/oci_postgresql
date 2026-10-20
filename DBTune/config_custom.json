@@ -2,7 +2,7 @@
   "items": [
     {
       "configKey": "work_mem",
-      "overridenConfigValue": "4096"
+      "overridenConfigValue": "4097"
     },
     {
       "configKey": "random_page_cost",
