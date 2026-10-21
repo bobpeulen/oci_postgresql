@@ -2,6 +2,7 @@
 
 # Create user in OCI PostgreSQL
 ```
+CREATE USER dbtune_agent WITH PASSWORD '<password>';
 GRANT pg_monitor TO dbtune_agent;
 CREATE EXTENSION IF NOT EXISTS pg_stat_statements;
 ```
